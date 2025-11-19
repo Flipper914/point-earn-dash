@@ -298,11 +298,9 @@
             background-color: rgba(0, 0, 0, 0.6); 
             justify-content: center; 
             align-items: center;
-            pointer-events: none;
         }
         .modal.show { 
             display: flex; 
-            pointer-events: all;
         }
         .modal-content { 
             padding: 30px; 
@@ -326,8 +324,16 @@
         .dark-theme .loader { border-top-color: var(--primary-color-dark); }
 
         /* Reward Modal Specific Styles */
+        #reward-modal {
+            pointer-events: none;
+        }
+        #reward-modal.show {
+            pointer-events: all;
+        }
         #reward-modal .modal-content {
             padding: 40px 30px;
+            pointer-events: none;
+            user-select: none;
         }
         .reward-icon {
             font-size: 4rem;
